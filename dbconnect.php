@@ -1,5 +1,5 @@
 <?php
-@$dbcnx = new mysqli('localhost','root','','prime_clinic');
+@$dbcnx = new mysqli('localhost','root','root','prime_clinic');
 // @ to ignore error message display //
 if ($dbcnx->connect_error){
 	echo "Database is not online"; 
