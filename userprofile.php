@@ -57,7 +57,8 @@ if ($result3->num_rows >0){
                echo " Dr: " . $row[Doctor]." Date: " . $row[AptDate]." Time: " . $row[AptTime]. "<br>"; 
               echo "<input type='text' value=".$row[Doctor]." name = 'doctor'>";
               echo "<input type='text' value=".$row[AppointmentID]." name = 'slotID'>";
-			  echo "<input type='submit' value='RescheduleAppointment' name='RescheduleAppointment' id='Register' style='width:170px'>";
+              echo "<input type='submit' value='Reschedule Appointment' name='RescheduleAppointment' id='Register' style='width:170px'>";
+              echo "<input type='submit' value='Cancel Appointment' name='CancelAppointment' id='Register' style='width:170px'>";
 			echo "</form>";
 		}
 }

@@ -29,6 +29,21 @@ if ($result->num_rows >0){
 
 }
 
+$sql1 = "SELECT * FROM appointments WHERE Patient= '$currentPatient';";
+$result1 = $dbcnx->query($sql1);
+if ($result1->num_rows >0){
+    while($row=$result1->fetch_assoc()) {
+        if ($row[AptDate]==$chosenDate && $row[AptTime]==$chosenTime){
+            echo "Clash! Please book a diff slot";
+            echo "<a href='appointment.php'>Back</a>";
+            exit;
+        }
+    }
+}
+
+
+
+
 if (isset($_POST['bookApt'])){
      $sql = "INSERT INTO appointments VALUES (NULL,'$chosenDoctor','$currentPatient','$chosenDate','$chosenTime');";
      $result = $dbcnx->query($sql);
