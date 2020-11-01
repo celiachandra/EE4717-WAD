@@ -10,9 +10,14 @@ $currentPatient=$_POST['patient'];
 $_SESSION['appointment_to_change'] = $_POST['slotID'];
 
 include "dbconnect.php";
-?><html>
+?>
+<style>
+<?php include 'style.css';?>
+</style>
+<html>
 
 <body>
+<div id='content' style='text-align:left'>
      <h1>Book Appointment</h1>
      <form method="post" action="confirmation.php">
      
@@ -33,8 +38,8 @@ if ($result->num_rows >0) {
 else {
      echo $chosenDoctor.", you have no other available slots.";
 }
-    echo "<input type='text' value='$currentPatient' name = 'patient'>";
-     echo"     <input type='submit' value='Reschedule Appointment' name = 'DoctorReschedApt'>";
+    echo "<input type='text' value='$currentPatient' name = 'patient'><br><br>";
+     echo"<div style='text-align:right'><input type='submit' value='Reschedule Appointment' name = 'DoctorReschedApt' id='Register' style='width:170px;'></div>";
 
 
 
@@ -42,6 +47,12 @@ else {
 
 ?></form>
      </form>
+	 </div>
 </body>
-
+<footer>
+	<small><i>Copyright &copy; 2017 Prime Clinic</i></small><br>
+	<small><i>3360 Islington Ave, Toronto, Ontario</i></small><br>
+	<small><i><a href="mailto:prime@clinic.com">prime@clinic.com</a></i></small>
+	
+  </footer>
 </html>

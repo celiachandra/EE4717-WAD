@@ -16,7 +16,7 @@
   <div id="buttons">
   <?php 
   if (isset($_SESSION['valid_user'])){
-	  echo "Welcome, ".$_SESSION['valid_user']." <br />";
+	  echo "Welcome, <a href='userprofile.php'>".$_SESSION['valid_user']."</a> ";
 	  echo "<a href='logout.php'>Log out</a><br />";
   }
   else {

@@ -35,22 +35,24 @@
 		</tr>
 	</table> 
 	<h2>Our Doctors</h2>
+	<form method='post' action='appointment.php'>
 	<table id='services' style='text-align:center;'>
 		<tr>
-			<td><img id='doctor' src='images/doctors1.jpg' width=90% alt='doctors1'><br>
-			Dr. Chloe<br>
-			<input type='button' name='doctor1' value='Book Now' id='doctor1'>
+			<td><img id='doctor' src='doctors1.jpg' width=90% alt='doctors1'><br>
+			<br>
+			<input type='submit' name='doctor1' value='Dr Chloe' id='doctor1'>
 			</td>
-			<td style='background-color: #f5f8ff;'><img id='doctor' src='images/doctors2.jpg' width=90% alt='doctors2'><br>
-			Dr. Daniel<br>
-			<input type='button' name='doctor2' value='Book Now' id='doctor2'>
+			<td style='background-color: #f5f8ff;'><img id='doctor' src='doctors2.jpg' width=90% alt='doctors2'><br>
+			<br>
+			<input type='submit' name='doctor2' value='Dr Daniel' id='doctor2'>
 			</td>
-			<td><img id='doctor' src='images/doctors3.jpg' width=90% alt='doctors3'><br>
-			Dr. Jack<br>
-			<input type='button' name='doctor3' value='Book Now' id='doctor3'>
+			<td><img id='doctor' src='doctors3.jpg' width=90% alt='doctors3'><br>
+			<br>
+			<input type='submit' name='doctor3' value='Dr Jack' id='doctor3'>
 			</td>
 		</tr>
 	</table>
+	</form>
   </div>
   <footer>
 	<small><i>Copyright &copy; 2017 Prime Clinic</i></small><br>

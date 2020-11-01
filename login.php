@@ -52,36 +52,36 @@ else{
         echo "You are not logged in.";
     }
 }
-    
+
 ?>
-<?php include "nav.php";?>
+<?php include 'nav.php';?>
 <style>
-<?php include "style.css";?>
+<?php include 'style.css';?>
 </style>
+
 <html>
 <body>
 <div id='content'>
-<div id='boxes'>
-<h1>Login</h1>
+<div class='boxes'>
+<h2>Login</h2>
      <form method="post" action="">
      <table class='details'>
      <tr><td>Email:</td>
-     <td><input type="email" name="userEmail"></td></tr>
+     <td><input type="email" name="userEmail" required></td></tr>
      <tr><td>Password:</td>
-     <td><input type="password" name="userPassword"></td></tr>
-     <tr><td colspan="2" align="center">
+     <td><input type="password" name="userPassword" required></td></tr>
+     <tr><td colspan="2">
 	 <label for="userType">User Type:</label>
 	<select id="userType" name="userType">
 	  <option value="Patient">Patient</option>
 	  <option value="Doctor">Doctor</option>
-	  
-	</select>
-     <input type="submit" value="LOGIN" name = 'submit'></td></tr>
-     </table></form>
-</div>
-</div>
+	</select></td></tr></table>
+     <input type="submit" value="LOGIN" name = 'submit' id='Register'>
+     </form>
+	 </div>
      </body>
-<footer>
+</div>
+	<footer>
 	<small><i>Copyright &copy; 2017 Prime Clinic</i></small><br>
 	<small><i>3360 Islington Ave, Toronto, Ontario</i></small><br>
 	<small><i><a href="mailto:prime@clinic.com">prime@clinic.com</a></i></small>

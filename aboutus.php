@@ -23,13 +23,12 @@
 		<p>Served 10,000+ patients with 4.8/5 rating for customer experience</p>
 		</ul>
 		</div>
-	</div>
-		<div class='item'><img class="indeximgs" src="images/images4.jpg"></div>
+		<div class='item2'><img class="indeximgs" src="images/images4.jpg" style='width:85%'></div></div>
 	<div class='bar'>
 		<div class='item'>
-		<img class="indeximgs" src="images/images5.jpg" style="margin-left:5%">
+		<img class="indeximgs" src="images/images5.jpg" style="margin-left:5%;">
 		</div>
-		<div class='item' style="text-align:center;">
+		<div class='item2' style="text-align:center;">
 		<ul>
 			<li><strong>Address:</strong> 3360 Islington Ave, Toronto, Ontario</li>
 			<li><strong>Phone number:</strong> 416-522-9075</li>

@@ -34,28 +34,38 @@ $result = $dbcnx->query($sql);
 
 }
 
-if (!$result) {
-	echo "Your query failed.";}
-else
-    echo "Welcome ". $username . ". You are now registered";
+if ($result) {
+    echo "Welcome ". $username . ". You are now registered";}
+
     
 ?>
-
+<?php include 'nav.php';?>
+<style>
+<?php include 'style.css';?>
+</style>
 <html>
 <body>
-<h1>REGISTRATION</h1>
+<div id='content'>
+<div class='boxes'>
+<h2>Registration</h2>
      <form method="post" action="">
-     <table>
+     <table class='details'>
      <tr><td>Name:</td>
-     <td><input type="text" name="userName"></td></tr>
+     <td><input type="text" name="userName" required></td></tr>
      <tr><td>Email:</td>
-     <td><input type="email" name="userEmail"></td></tr>
+     <td><input type="email" name="userEmail" required></td></tr>
      <tr><td>Password:</td>
-     <td><input type="password" name="userPassword"></td></tr>
+     <td><input type="password" name="userPassword" required></td></tr>
      <tr><td>Re-enter password:</td>
-     <td><input type="password" name="userPassword2"></td></tr>
-     <tr><td colspan="2" align="center">
-     <input type="submit" value="Register" name = 'submit'></td></tr>
-     </table></form>
+     <td><input type="password" name="userPassword2" required></td></tr></table>
+     <input type="submit" value="Register" name = 'submit' id='Register'>
+     </form>
+	 </div>
+	 </div>
      </body>
+	<footer>
+	<small><i>Copyright &copy; 2017 Prime Clinic</i></small><br>
+	<small><i>3360 Islington Ave, Toronto, Ontario</i></small><br>
+	<small><i><a href="mailto:prime@clinic.com">prime@clinic.com</a></i></small>
+  </footer>
 </html>
