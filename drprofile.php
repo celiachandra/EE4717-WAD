@@ -3,7 +3,6 @@
 if (isset($_SESSION['valid_user'])) {
   $doctor=$_SESSION['valid_user'];
 }
-
 include "dbconnect.php";
 $sql="SELECT * FROM doctors WHERE Name='$doctor'; ";
 $result=$dbcnx->query($sql);

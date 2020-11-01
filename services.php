@@ -45,15 +45,15 @@ echo '<p>Please login to book appointment</p>';
 		<tr>
 			<td><img id='doctor' src='images/doctors1.jpg' width=90% alt='doctors1'><br>
 			<br>
-			<input type='submit' name='doctor' value='Dr Chloe' id='doctor1'>
+			<input type='submit' name='doctor' value='Chloe' id='doctor1'>
 			</td>
 			<td style='background-color: #f5f8ff;'><img id='doctor' src='images/doctors2.jpg' width=90% alt='doctors2'><br>
 			<br>
-			<input type='submit' name='doctor' value='Dr Daniel' id='doctor2'>
+			<input type='submit' name='doctor' value='Daniel' id='doctor2'>
 			</td>
 			<td><img id='doctor' src='images/doctors3.jpg' width=90% alt='doctors3'><br>
 			<br>
-			<input type='submit' name='doctor' value='Dr Jack' id='doctor3'>
+			<input type='submit' name='doctor' value='Jack' id='doctor3'>
 			</td>
 		</tr>
 	</table>
