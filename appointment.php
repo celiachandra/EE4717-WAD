@@ -2,6 +2,7 @@
 
 if ( !isset($_SESSION['valid_user'])) {
      echo '<p>Please login to book appointment</p>';
+     exit;
 }
 
 if (isset($_POST['doctor'])) {
@@ -57,13 +58,32 @@ $result=$dbcnx->query($sql);
 
 
 ?><h2>Book Appointment</h2>
-          <form method="post" action="confirmation.php">Doctor: <?php echo $chosenDoctor."<br>";
+Doctor: <?php echo $chosenDoctor."<br>";
 error_reporting(E_ERROR | E_PARSE);
 
-$sql="SELECT * FROM availableslots WHERE DoctorName = '$chosenDoctor' ";
+echo "<form method='post' action=''>";
+$sql="SELECT DISTINCT SlotDate FROM availableslots WHERE DoctorName = '$chosenDoctor' ORDER BY SlotDate ASC;";
+$result=$dbcnx->query($sql);
+if ($result->num_rows >0) {
+
+echo "<label for='dates'>Choose a date:</label>";
+echo "<select name='dates' id='dates'>";
+
+while($row=$result->fetch_assoc()) {
+     echo "<option value = '$row[SlotID]'> ".$row[SlotDate]."</option>";
+}
+
+echo "</select><br>";
+}
+
+echo "<form method='post' action='confirmation.php'>";
+$sql="SELECT * FROM availableslots WHERE DoctorName = '$chosenDoctor' ORDER BY SlotDate ASC, SlotTime ASC;";
 $result=$dbcnx->query($sql);
 
+
+
 if ($result->num_rows >0) {
+    
      while($row=$result->fetch_assoc()) {
           echo "<input type='radio' value=".$row[SlotID]." name='chosenSlot'>";
           echo "<label> Date/Time: ". $row[SlotDate]. " ". $row[SlotTime]."</label><br>";
@@ -83,11 +103,8 @@ else {
 }
 
 
-
-
-
 ?></form>
-          </form>
+          </form><input type="submit" value="Back" <a href="#" onclick="history.back();"></a>
      </div>
 </body>
 <footer><small><i>Copyright &copy;

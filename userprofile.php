@@ -48,7 +48,7 @@ echo "</form>";
 
 echo "<h3>Appointments:</h3>";
 
-$sql3 = "SELECT * FROM appointments WHERE Patient= '$patient'; ";
+$sql3 = "SELECT * FROM appointments WHERE Patient= '$patient' ORDER BY AptDate ASC, AptTime ASC;";
 $result3 = $dbcnx->query($sql3);
 if ($result3->num_rows >0){
           while($row = $result3->fetch_assoc()) {

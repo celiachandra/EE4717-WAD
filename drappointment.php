@@ -2,6 +2,7 @@
 
 if ( !isset($_SESSION['valid_user'])) {
      echo '<p>Please login to reschedule appointment</p>';
+     exit;
 }
 
 $chosenDoctor=$_SESSION['valid_user'];
