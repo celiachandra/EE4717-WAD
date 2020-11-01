@@ -1,9 +1,5 @@
 <?php include "nav.php";
 
-if ( !isset($_SESSION['valid_user'])) {
-     echo '<p>Please login to book appointment</p>';
-     exit;
-}
 
 if (isset($_POST['doctor'])) {
      $chosenDoctor=$_POST['doctor'];
@@ -58,7 +54,14 @@ $result=$dbcnx->query($sql);
 
 
 ?><h2>Book Appointment</h2>
-Doctor: <?php echo $chosenDoctor."<br>";
+<?php 
+
+if ( !isset($_SESSION['valid_user'])) {
+     echo '<p>Please login to book appointment</p>';
+     exit;
+}
+
+echo "Doctor:".$chosenDoctor."<br>";
 error_reporting(E_ERROR | E_PARSE);
 
 echo "<form method='post' action=''>";
@@ -75,7 +78,11 @@ while($row=$result->fetch_assoc()) {
 
 echo "</select><br>";
 }
-
+else {
+     echo $chosenDoctor." is not available for consultations at the moment. <br><br>";
+     exit;
+}
+echo "</form>";
 echo "<form method='post' action='confirmation.php'>";
 $sql="SELECT * FROM availableslots WHERE DoctorName = '$chosenDoctor' ORDER BY SlotDate ASC, SlotTime ASC;";
 $result=$dbcnx->query($sql);

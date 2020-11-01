@@ -1,5 +1,10 @@
 <?php
-    include 'nav.php';
+	include 'nav.php';
+	
+	if (!isset($_SESSION['valid_user']))
+{
+echo '<p>Please login to book appointment</p>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,15 +45,15 @@
 		<tr>
 			<td><img id='doctor' src='doctors1.jpg' width=90% alt='doctors1'><br>
 			<br>
-			<input type='submit' name='doctor1' value='Dr Chloe' id='doctor1'>
+			<input type='submit' name='doctor' value='Dr Chloe' id='doctor1'>
 			</td>
 			<td style='background-color: #f5f8ff;'><img id='doctor' src='doctors2.jpg' width=90% alt='doctors2'><br>
 			<br>
-			<input type='submit' name='doctor2' value='Dr Daniel' id='doctor2'>
+			<input type='submit' name='doctor' value='Dr Daniel' id='doctor2'>
 			</td>
 			<td><img id='doctor' src='doctors3.jpg' width=90% alt='doctors3'><br>
 			<br>
-			<input type='submit' name='doctor3' value='Dr Jack' id='doctor3'>
+			<input type='submit' name='doctor' value='Dr Jack' id='doctor3'>
 			</td>
 		</tr>
 	</table>
