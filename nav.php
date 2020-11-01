@@ -3,7 +3,7 @@
 ?><html lang="en">
 <div id="head">
   <header>
-    <p id="primeclinic"><img src="logo.png" width=23px alt="logo"><strong>Prime Clinic</strong></p>
+    <p id="primeclinic"><img src="images/logo.png" width=23px alt="logo"><strong>Prime Clinic</strong></p>
     <nav><strong><a href="index.php" id="active">Home</a><a href="aboutus.php">About Us</a><a
           href="services.php">Services</a></strong></nav>
     <div id="buttons"><?php if (isset($_SESSION['valid_user'])) {

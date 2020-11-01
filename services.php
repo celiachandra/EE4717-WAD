@@ -43,15 +43,15 @@ echo '<p>Please login to book appointment</p>';
 	<form method='post' action='appointment.php'>
 	<table id='services' style='text-align:center;'>
 		<tr>
-			<td><img id='doctor' src='doctors1.jpg' width=90% alt='doctors1'><br>
+			<td><img id='doctor' src='images/doctors1.jpg' width=90% alt='doctors1'><br>
 			<br>
 			<input type='submit' name='doctor' value='Dr Chloe' id='doctor1'>
 			</td>
-			<td style='background-color: #f5f8ff;'><img id='doctor' src='doctors2.jpg' width=90% alt='doctors2'><br>
+			<td style='background-color: #f5f8ff;'><img id='doctor' src='images/doctors2.jpg' width=90% alt='doctors2'><br>
 			<br>
 			<input type='submit' name='doctor' value='Dr Daniel' id='doctor2'>
 			</td>
-			<td><img id='doctor' src='doctors3.jpg' width=90% alt='doctors3'><br>
+			<td><img id='doctor' src='images/doctors3.jpg' width=90% alt='doctors3'><br>
 			<br>
 			<input type='submit' name='doctor' value='Dr Jack' id='doctor3'>
 			</td>
